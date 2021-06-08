@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="230dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/background_product"
+        android:layout_marginBottom="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:scaleType="fitXY"
+                android:padding="1.5dp"                android:src="@drawable/demo" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thumbnail"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingLeft="5dp"
+                android:paddingEnd="5dp"
+                android:text="Đèn Ngủ 3D Led Nhiều Mẫu Hình Cực Đẹp - 3 màu (Được chọn hình)"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/unitPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:paddingLeft="5dp"
+                android:paddingTop="-5dp"
+                android:text="20.000"
+                android:textColor="#D2F44336"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_width="58dp"
+                android:layout_height="34dp"
+                android:layout_below="@id/name"
+                android:background="@drawable/cart"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-3dp"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/addcart" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

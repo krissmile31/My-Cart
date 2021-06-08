@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cart.CartActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/cartActivity"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1">
+
+        <RelativeLayout
+            android:id="@+id/MyCartRelativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/mycart"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/mycart" />
+
+            <TextView
+                android:id="@+id/mycartabove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mycart"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/crafty_girls"
+                android:text="My Cart"
+                android:textColor="@color/purple_500"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/something"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mycartabove"
+                android:layout_alignParentRight="true">
+                <TextView
+                    android:id="@+id/quantityleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Quantity"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:layout_toEndOf="@id/quantityleft"
+                    android:text="Sum Price"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/MyCartRelativeLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="100dp"
+            tools:listitem="@layout/item_cart" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/background_searchbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/kalam_bold"
+                android:text="Total"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="₫ 490.000"
+                android:textColor="#E63A04"
+                android:textSize="28sp" />
+
+            <RelativeLayout
+                android:id="@+id/checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/totalPrice">
+
+                <ImageView
+                    android:id="@+id/cartImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/checkout" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cartImageView"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/yatra_one"
+                    android:text="Checkout"
+                    android:textColor="#1E88E5"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkoutActivity"
+        android:alpha="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/checkani" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/checkani2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/doneActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/tick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tick" />
+
+        <TextView
+            android:id="@+id/great"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tick"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/give_you_glory"
+            android:text="Great. It's yours!"
+            android:textColor="#E53935"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/continueshopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/great"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_rectangle_background"
+            android:backgroundTint="#6F2196F3"
+            android:backgroundTintMode="src_atop"
+            android:fontFamily="@font/bubblegum_sans"
+            android:padding="10dp"
+            android:text="Continue Shopping"
+            android:textAllCaps="false"
+            android:textColor="#101010"
+            android:textSize="20sp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/continueshopping"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-30dp"
+            android:src="@drawable/click" />
+
+    </RelativeLayout>
+</RelativeLayout>

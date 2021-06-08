@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/background_cart">
+
+        <ImageView
+            android:id="@+id/thumbnail_cart"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:padding="1.5dp"
+            android:src="@drawable/demo" />
+
+        <TextView
+            android:id="@+id/name_cart"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/thumbnail_cart"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="[Siêu HOT] Đèn Ngủ Chiếu Sao Tự Xoay 3D"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/price_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_cart"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/thumbnail_cart"
+            android:fontFamily="@font/viga"
+            android:text="49000"
+            android:textColor="#FF0600"
+            android:textSize="19sp" />
+
+        <RelativeLayout
+            android:id="@+id/InOrDe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/name_cart">
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:onClick="onClick"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:inputType="number"
+                android:text="1"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:onClick="onClick"
+                android:src="@drawable/plus" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/unitPrice_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@id/InOrDe"
+            android:text=""
+            android:textColor="#E53935"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

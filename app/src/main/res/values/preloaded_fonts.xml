@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/bonbon</item>
+        <item>@font/bubblegum_sans</item>
+        <item>@font/crafty_girls</item>
+        <item>@font/give_you_glory</item>
+        <item>@font/kalam_bold</item>
+        <item>@font/la_belle_aurore</item>
+        <item>@font/marck_script</item>
+        <item>@font/marko_one</item>
+        <item>@font/viga</item>
+        <item>@font/yatra_one</item>
+    </array>
+</resources>

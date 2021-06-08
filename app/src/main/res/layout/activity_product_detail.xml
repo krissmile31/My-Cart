@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ProductDetail">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:id="@+id/firstCardView"
+        android:layout_height="380dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnailInfo"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/loupe"/>
+
+            <TextView
+                android:id="@+id/nameInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thumbnailInfo"
+                android:text="[Siêu HOT] Đèn Ngủ Chiếu Sao Tự Xoay 3D"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/priceInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="49.000"
+                android:textColor="@android:color/holo_red_light"
+                android:layout_alignRight="@+id/nameInfo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="60dp"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:layout_below="@+id/nameInfo"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:id="@+id/secondCardView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/firstCardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/categoryInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: lights"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoryInfo"
+                android:layout_centerInParent="true">
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/subquantity"
+                    android:background="@drawable/minus"/>
+
+                <TextView
+                    android:id="@+id/quantityInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/subquantity"
+                    android:text="1"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/addquantity"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/quantityInfo"
+                    android:background="@drawable/plus"/>
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFBB86FC"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:id="@+id/addtocart"
+                android:textColor="@android:color/white"
+                android:text="Add to cart"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+

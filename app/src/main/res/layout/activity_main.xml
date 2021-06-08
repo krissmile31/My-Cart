@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_gravity="right|center_vertical"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/shopping_cart"-->
+<!--                android:src="@drawable/shopping_cart"-->
+<!--                android:layout_width="32dp"-->
+<!--                android:layout_height="32dp" />-->
+<!--            <TextView-->
+<!--                android:id="@+id/number"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:layout_gravity="top|right"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="#ffffff"-->
+<!--                android:text="0"-->
+<!--                android:alpha="0"-->
+<!--                android:background="@drawable/bg_red"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp" />-->
+<!--        </FrameLayout>-->
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="-5dip"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginEnd="10dip">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/cartRelativeLayout"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:clickable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingRight="3dip">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/cartButtonIV"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:background="@null"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:clickable="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="5dip"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:autoMirrored="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:src="@drawable/ic_baseline_shopping_cart_24" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/textNotify"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_alignTop="@id/cartButtonIV"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:layout_marginTop="5dip"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:background="@drawable/notification_circle"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:minWidth="20dip"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:minHeight="20dip"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:padding="3dip"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:text="0"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textColor="#424242"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:textSize="12sp" />&ndash;&gt;-->
+<!--&lt;!&ndash;            </RelativeLayout>&ndash;&gt;-->
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:minHeight="?attr/actionBarSize"-->
+<!--        android:theme="?attr/actionBarTheme" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/background_searchbar">
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            >-->
+
+        <EditText
+            android:id="@+id/searchView"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:background="#00D34646"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:ems="10"
+            android:paddingLeft="5dp"
+            android:hint="Search..."
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/black" />
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/loupe" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:alpha="0"
+        app:SpinKit_Color="@color/black" />
+
+    <TextView
+        android:id="@+id/emptySearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:alpha="0"
+        android:text="Can't find products match "
+        android:textColor="#050505"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/emptyResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emptySearch"
+        android:layout_centerInParent="true"
+        android:textColor="#780E0E"
+        android:textSize="16sp" />
+
+</RelativeLayout>
